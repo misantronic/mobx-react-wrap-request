@@ -19,7 +19,7 @@ useWrapRequest.withObservableOverrides = <T, Y extends ToupleArray>(
     overrides: AnnotationsMap<WrapRequest, NoInfer<PropertyKey>>
 ) => {
     return (...args: ReactWrapRequestParams<T, Y>) => {
-        const res = useFn(...args);
+        const res = useFn<T, Y>(...args);
 
         if (overrides) {
             makeAutoObservable(res, overrides);
