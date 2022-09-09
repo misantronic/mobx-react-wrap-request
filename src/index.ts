@@ -1,4 +1,4 @@
-import { AnnotationsMap, makeAutoObservable } from 'mobx';
+import { AnnotationsMap, makeObservable } from 'mobx';
 import { useWrapRequest as useFn } from 'react-wrap-request';
 import { WrapRequest } from 'wrap-request';
 
@@ -24,7 +24,7 @@ useWrapRequest.withObservableOverrides = (
         const res = useFn<T, Y>(...args);
 
         if (overrides) {
-            makeAutoObservable(res, overrides);
+            makeObservable(res, overrides);
         }
 
         return res;

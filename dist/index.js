@@ -11,7 +11,7 @@ exports.useWrapRequest.withObservableOverrides = (overrides) => {
     return (...args) => {
         const res = (0, react_wrap_request_1.useWrapRequest)(...args);
         if (overrides) {
-            (0, mobx_1.makeAutoObservable)(res, overrides);
+            (0, mobx_1.makeObservable)(res, overrides);
         }
         return res;
     };
