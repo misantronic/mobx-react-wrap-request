@@ -1,0 +1,11 @@
+[submodule "wrap-request"]
+	path = wrap-request
+	url = https://github.com/misantronic/wrap-request
+
+[submodule "react-wrap-request"]
+	path = react-wrap-request
+	url = https://github.com/misantronic/react-wrap-request
+
+[submodule "mobx-wrap-request"]
+	path = mobx-wrap-request
+	url = https://github.com/misantronic/mobx-wrap-request

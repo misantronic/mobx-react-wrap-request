@@ -1,0 +1,37 @@
+{
+    "name": "mobx-react-wrap-request",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "tsc -p ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/misantronic/mobx-react-wrap-request.git"
+    },
+    "keywords": [
+        "mobx"
+    ],
+    "author": "David Schkalee",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/misantronic/mobx-react-wrap-request/issues"
+    },
+    "homepage": "https://github.com/misantronic/mobx-react-wrap-request#readme",
+    "peerDependencies": {
+        "mobx": ">= 6.x",
+        "react-wrap-request": ">= 3.0.1"
+    },
+    "devDependencies": {
+        "mobx": "^6.6.2",
+        "tslib": "^2.4.0",
+        "typescript": "^4.8.0",
+        "wrap-request": "^6.0.2"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true
+    },
+    "dependencies": {}
+}
