@@ -15,10 +15,12 @@ export const useWrapRequest = <T, Y extends ToupleArray>(
     return useFn<T, Y>(...args);
 };
 
-useWrapRequest.withObservableOverrides = <T, Y extends ToupleArray>(
+useWrapRequest.withObservableOverrides = (
     overrides: AnnotationsMap<WrapRequest, NoInfer<PropertyKey>>
 ) => {
-    return (...args: ReactWrapRequestParams<T, Y>) => {
+    return <T, Y extends ToupleArray>(
+        ...args: ReactWrapRequestParams<T, Y>
+    ) => {
         const res = useFn<T, Y>(...args);
 
         if (overrides) {
