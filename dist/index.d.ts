@@ -1,11 +1,9 @@
 import { AnnotationsMap } from 'mobx';
-import * as pkg from 'react-wrap-request';
 import { WrapRequest } from 'wrap-request';
+declare type ToupleArray = ReadonlyArray<any> | readonly [any];
 declare type NoInfer<T> = [T][T extends any ? 0 : never];
-declare type ReactWrapRequestParams = Parameters<typeof pkg.useWrapRequest>;
-declare function buildNewWrapRequest(overrides: AnnotationsMap<WrapRequest, NoInfer<PropertyKey>> | undefined, ...args: ReactWrapRequestParams): WrapRequest<unknown, any, unknown, any>;
-declare function newUseWrapRequest(...args: ReactWrapRequestParams): ReturnType<typeof buildNewWrapRequest>;
-declare namespace newUseWrapRequest {
-    var withObservableOverrides: (overrides: AnnotationsMap<WrapRequest<any, any, any, any>, PropertyKey>) => (req: (...deps: readonly any[] | readonly [any]) => Promise<unknown>, options?: pkg.ReactWrapRequestOptions<readonly any[] | readonly [any], unknown> | undefined) => WrapRequest<unknown, any, unknown, any>;
-}
-export { newUseWrapRequest as useWrapRequest };
+export declare const useWrapRequest: {
+    <T, Y extends ToupleArray>(req: (...deps: Y) => Promise<T>, options?: import("react-wrap-request").ReactWrapRequestOptions<Y, T> | undefined): WrapRequest<T, Y[0], T, any>;
+    withObservableOverrides<T_1, Y_1 extends ToupleArray>(overrides: AnnotationsMap<WrapRequest, NoInfer<PropertyKey>>): (req: (...deps: Y_1) => Promise<T_1>, options?: import("react-wrap-request").ReactWrapRequestOptions<Y_1, T_1> | undefined) => WrapRequest<T_1, Y_1[0], T_1, any>;
+};
+export {};
